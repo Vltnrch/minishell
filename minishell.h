@@ -6,7 +6,7 @@
 /*   By: vroche <vroche@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/10 14:15:37 by vroche            #+#    #+#             */
-/*   Updated: 2015/10/22 19:35:59 by vroche           ###   ########.fr       */
+/*   Updated: 2015/10/24 13:08:53 by vroche           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int				ft_isexec(char *str);
 
 char			*ft_env_search(char **env, char *search);
 void			ft_perror_exit(const char *str);
+void			ft_doublefree(char **av);
 
 void			ft_setenv(t_sh1 *sh, char **av);
 void			ft_unsetenv(t_sh1 *sh, char **av);

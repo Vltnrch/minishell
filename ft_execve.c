@@ -6,7 +6,7 @@
 /*   By: vroche <vroche@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/09/29 15:40:51 by vroche            #+#    #+#             */
-/*   Updated: 2015/10/14 17:18:28 by vroche           ###   ########.fr       */
+/*   Updated: 2015/10/24 13:15:03 by vroche           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int			ft_execve(t_sh1 *sh, char **env, char **av)
 		while (*tmp)
 		{
 			tmp2 = ft_strjoin(*tmp, tmp3);
+			free(*tmp);
 			if (access(tmp2, F_OK) == 0)
 				break ;
 			free(tmp2);

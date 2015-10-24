@@ -6,7 +6,7 @@
 /*   By: vroche <vroche@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/10 14:15:26 by vroche            #+#    #+#             */
-/*   Updated: 2015/10/22 19:35:35 by vroche           ###   ########.fr       */
+/*   Updated: 2015/10/24 13:09:09 by vroche           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	manage_line(t_sh1 *sh)
 	char	*line;
 	char	**av;
 
-	while (!(line = readline("$> ")))
+	while ((line = readline("$> ")))
 	{
 		av = ft_spacesplit(line);
 		if (*av == NULL)
@@ -53,6 +53,7 @@ static void	manage_line(t_sh1 *sh)
 		else
 			ft_execve(sh, sh->environ, av);
 		free(line);
+		ft_doublefree(av);
 	}
 }
 
