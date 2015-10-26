@@ -6,7 +6,7 @@
 /*   By: vroche <vroche@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/10 14:15:26 by vroche            #+#    #+#             */
-/*   Updated: 2015/10/24 13:09:09 by vroche           ###   ########.fr       */
+/*   Updated: 2015/10/26 14:25:08 by vroche           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ static int	ft_exit(char **av)
 	ft_printf("exit\n");
 	exit(av[1] ? ft_atoi(av[1]) % 256 : 0);
 }
-
 
 static void	manage_line(t_sh1 *sh)
 {
