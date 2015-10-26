@@ -6,7 +6,7 @@
 /*   By: vroche <vroche@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/10 14:15:26 by vroche            #+#    #+#             */
-/*   Updated: 2015/10/26 14:25:08 by vroche           ###   ########.fr       */
+/*   Updated: 2015/10/26 14:36:23 by vroche           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ static void	manage_line(t_sh1 *sh)
 		else
 			ft_execve(sh, sh->environ, av);
 		free(line);
-		ft_doublefree(av);
 	}
 }
 
